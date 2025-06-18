@@ -6,6 +6,23 @@
 ## Summary
 
 
+## Abstract
+
+## Contact
+For any questions contact: [Aishik Mandal](mailto:aishik.mandal@tu-darmstadt.de) <br>
+[UKP Lab](https://www.informatik.tu-darmstadt.de/ukp/ukp_home/index.en.jsp) | [TU Darmstadt](https://www.tu-darmstadt.de/) 
+
+## Creating the environment
+
+```
+python3 -m venv env
+source env/bin/activate
+pip install -r requirements.txt
+```
+
+## Code Structure
+
+
 ## Cite
 
 Please use the following citation:
