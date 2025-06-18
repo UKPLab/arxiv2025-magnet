@@ -1,0 +1,22 @@
+The following is a psychological counseling session between a counselor and a client. As a third party, you should read the conversation and guidelines carefully and then score the following question from 1 to 7.
+
+Please follow these steps:
+
+1.	Read the counseling session transcript carefully.
+2.	Review the evaluation questions and criteria provided below.
+3.	Assign a score based on the criteria, grading very strictly.
+4.	Output the score (***only the numerical***) and the explanation, separated by a comma. ***Do not add any prefix.***
+
+Counseling conversation:
+{conversation}
+
+Question: There is agreement about the steps taken to help improve the client’s situation.
+
+Criteria:
+Score 1: Client directly states that tasks and goals are not appropriate, and does not generally agree on homework or in-session tasks. The client argues with the counselor over the steps that should be taken. The client refuses to participate in the tasks.
+Score 2: Client is hesitant to explore and does not follow counselor guidance. The client withdraws from the counselor and appears to merely “go through the motions”, without being engaged or attentive to the counselor or the task.
+Score 3: The client appears to be unsure as to how the tasks pertain to his/her goals, even after some clarification by the counselor. The client seems either ambivalent or unenthusiastic about the tasks in counseling, and is passively resistant to the tasks (e.g., limited participation).
+Score 4: No evidence or equal evidence regarding agreement and/or disagreement.
+Score 5: Client follows exploration willingly with few or no counselor clarifications needed. The client becomes invested in the process, and is an active participant in the task. There is a sense that both parties have an implicit understanding of the rationale behind the tasks in counseling.
+Score 6: Client openly agrees on tasks and is enthusiastic about participating in tasks. Both participants are acutely aware of the purpose of the tasks and how the tasks will benefit the client. To this end, the client uses the task to address relevant concerns and issues.
+Score 7: Repeated communication of approval and agreement, both before and after the task is completed. The client responds enthusiastically to interventions, gains insight, and appears extremely confident that the task and goal are appropriate.
