@@ -1,6 +1,6 @@
 # MASCS-Gen: Multi-Agent Synthetic Counseling Session Generation
 <p align="center">
-<img src ="img/MASCS_Gen.png" width="500">
+<img src ="img/MASCS-Gen.png" width="500">
 </p>
 
 ## Summary
