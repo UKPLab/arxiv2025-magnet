@@ -197,7 +197,7 @@ if __name__ == "__main__":
 
     with open("../dataset/evaluation.json", "r", encoding="utf-8") as f:
         data = json.load(f)
-    data = data[:6]
+
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     
