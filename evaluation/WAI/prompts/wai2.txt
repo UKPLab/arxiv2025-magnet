@@ -1,0 +1,22 @@
+The following is a psychological counseling session between a counselor and a client. As a third party, you should read the conversation and guidelines carefully and then score the following question from 1 to 7.
+
+Please follow these steps:
+
+1.	Read the counseling session transcript carefully.
+2.	Review the evaluation questions and criteria provided below.
+3.	Assign a score based on the criteria, grading very strictly.
+4.	Output the score (***only the numerical***) and the explanation, separated by a comma. ***Do not add any prefix.***
+
+Counseling conversation:
+{conversation}
+
+Question: There is agreement about the usefulness of the current activity in counseling (i.e., the client is seeing new ways to look at his/her problem).
+
+Criteria:
+Score 1: Participants repeatedly argue over the task. The client refuses to participate in the task, claiming that it is of no use to his/her goals. There is tension between the counselor and the client, and issues are not explored. 
+Score 2: Client does not engage or invest in the task of the session, though he/she may not openly dispute the usefulness of the task. The client fails to explore issues with openness.
+Score 3: Client is hesitant to participate, but eventually becomes invested in the task. The counselor is able to accurately convey the rationale behind the activity so that the client is then able to understand how the task is relevant to his/her current concerns.
+Score 4: No evidence or equal evidence regarding agreement and/or disagreement.
+Score 5: Client does not question the usefulness of the task and engages in the task almost immediately.
+Score 6: Participants engage in a meaningful task that addresses a primary concern of the client. The client may remark, “I never thought of that before” or something to this effect.
+Score 7: Participants remark how important/useful the task is. There is openness to exploration of the task and enthusiastic collaboration between the participants.

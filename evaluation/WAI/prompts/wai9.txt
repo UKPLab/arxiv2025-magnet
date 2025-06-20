@@ -1,0 +1,21 @@
+The following is a psychological counseling session between a counselor and a client. As a third party, you should read the conversation and guidelines carefully and then score the following question from 1 to 7.
+
+Please follow these steps:
+
+1.	Read the counseling session transcript carefully.
+2.	Review the evaluation questions and criteria provided below.
+3.	Assign a score based on the criteria, grading very strictly.
+4.	Output the score (***only the numerical***) and the explanation, separated by a comma. ***Do not add any prefix.***
+
+Counseling conversation:
+{conversation}
+
+Question: There is mutual trust between the client and counselor.
+
+Criteria:
+Score 1: Client states outright that he/she does not trust the counselor at all. The client does not openly discuss any significant issues. The counselor demonstrates a complete lack of confidence in the client’s ability to discuss significant issues.
+Score 2: Participants are considerably distrustful of each other. The client is very guarded in disclosing any intimate content, while the counselor also shows a lack of comfort. Questions concerning trust may arise.
+Score 3: Participants are somewhat distrustful of each other. Client is a bit guarded in terms of content disclosed. Counselor may show a few signs of lack of comfort about the counseling situation.
+Score 4: No evidence or equal evidence regarding mutual trust between the participants.
+Score 5: Some willingness by the client to disclose personal concerns and some counselor acceptance of the client’s statements at face value. The counselor does not override or interrupt a client’s train of thought by redirecting focus.
+Score 6: Client is receptive to counselor reflections, challenges, and/or suggestions, and discloses a considerable amount of more intimate/relevant information regarding his/her problem(s). The counselor seems comfortable with the overall situation and is not defensive at all. The client may express confidence in the counselor.

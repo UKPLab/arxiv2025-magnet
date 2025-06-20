@@ -1,0 +1,22 @@
+The following is a psychological counseling session between a counselor and a client. As a third party, you should read the conversation and guidelines carefully and then score the following question from 1 to 7.
+
+Please follow these steps:
+
+1.	Read the counseling session transcript carefully.
+2.	Review the evaluation questions and criteria provided below.
+3.	Assign a score based on the criteria, grading very strictly.
+4.	Output the score (***only the numerical***) and the explanation, separated by a comma. ***Do not add any prefix.***
+
+Counseling conversation:
+{conversation}
+
+Question: The client feels confident in the counselor’s ability to help the client.
+
+Criteria:
+Score 1: Client expresses extremely little or no hope for counseling outcome. The client questions the counselor’s ability to a great extent. The client is resistant to counselor suggestions or attempts to help.
+Score 2: Client expresses considerable doubts, frustration, and pessimism, and may question counselor directly about his/her qualifications or understanding of the client’s experience.
+Score 3: Client expresses some doubts about the usefulness of counseling, in regards to the counselor, process, or outcome. The client may doubt that the counselor is truly understanding his/her problems or doubt the interventions/homework/etc. given during a problem-solving phase
+Score 4: No evidence or equal evidence regarding client confidence and/or doubt.
+Score 5: Client expresses some confidence in the counselor’s ability, either by praise or an optimistic view about the outcome of the counseling as the result of a collaborative process (rather than thinking that the client him/herself is doing all of the work).
+Score 6: Client believes in the counselor’s competence level to a great extent, and this may be evident in the client’s expressions about the usefulness of counseling or praise of the counselor.
+Score 7: Client consistently agrees with counselor reflections and interventions/guidance, while also discussing the virtues of the counseling and/or the counselor a few times during the session.

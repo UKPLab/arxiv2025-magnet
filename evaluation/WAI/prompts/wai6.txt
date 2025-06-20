@@ -1,0 +1,22 @@
+The following is a psychological counseling session between a counselor and a client. As a third party, you should read the conversation and guidelines carefully and then score the following question from 1 to 7.
+
+Please follow these steps:
+
+1.	Read the counseling session transcript carefully.
+2.	Review the evaluation questions and criteria provided below.
+3.	Assign a score based on the criteria, grading very strictly.
+4.	Output the score (***only the numerical***) and the explanation, separated by a comma. ***Do not add any prefix.***
+
+Counseling conversation:
+{conversation}
+
+Question: The client and counselor are working on mutually agreed upon goals.
+
+Criteria:
+Score 1: Topics change constantly and abruptly without consideration of the other, mostly after interruptions by either participant. There is a good deal of clashing over the appropriateness, definitions, and/or boundaries of the client’s goals. 
+Score 2: Topics shift somewhat frequently before resolution or closure. The counselor may interrupt and redirect focus onto a less relevant topic without prompting from the client. Friction between the participants becomes evident – one or both may show dissatisfaction with the change in topics or the pace of counseling in general.
+Score 3: Some shifts are induced from a relevant to another relevant or non-relevant topic by either participant before closure has been established for the original topic. This is indicated by interruptions or ignoring the other’s statement and moving on.
+Score 4: No evidence or equal evidence regarding collaboration on in-session goals.
+Score 5: Some evidence that participants are making progress towards in-session goals via discussion of relevant topics.
+Score 6: Considerable progress made towards goals through thoughtful discussion of topics that both participants agree are relevant. Participants frequently agree with each other about what they are currently doing.
+Score 7: Participants completely agree upon goals through extremely productive discussions of more than one relevant topic. Participants almost always reach closure on current topic that the client recognized as a goal, before shifting to another relevant topic.

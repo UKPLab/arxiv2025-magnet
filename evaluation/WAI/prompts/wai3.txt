@@ -1,0 +1,22 @@
+The following is a psychological counseling session between a counselor and a client. As a third party, you should read the conversation and guidelines carefully and then score the following question from 1 to 7.
+
+Please follow these steps:
+
+1.	Read the counseling session transcript carefully.
+2.	Review the evaluation questions and criteria provided below.
+3.	Assign a score based on the criteria, grading very strictly.
+4.	Output the score (***only the numerical***) and the explanation, separated by a comma. ***Do not add any prefix.***
+
+Counseling conversation:
+{conversation}
+
+Question: There is a mutual liking between the client and counselor.
+
+Criteria:
+Score 1: There is open dislike between the participants. Overt hostility is apparent. Arguing and disparaging comments may be present. Neither participant displays concern for the other, and there is a noticeable coldness between them.
+Score 2: Counselor fails to show concern for the client. This may be reflected in the counselor’s forgetting of important details of the client’s life. The client may question whether the counselor disapproves of him/her.
+Score 3: Although not verbalized, there appear to be stresses in the relationship between the participants. In particular, the counselor rarely/never reacts warmly toward the client, nor does the counselor reinforce healthy outside behaviors very often. The relationship seems relatively cold and mechanical.
+Score 4: No evidence or equal evidence regarding mutual liking and/or disliking.
+Score 5: Participants react with warmth toward each other for most of the session. The counselor is actively involved in exploration of emotions and is aware of important details of the client’s life. The counselor’s tone is empathic and encouraging for the most part.
+Score 6: Participants react warmly toward each other throughout the session. The counselor encourages healthy behavior and continually expresses what seems to be genuine concern for the client.
+Score 7: Counselor appears genuinely interested in the client’s life, including hobbies and other outside interests. The counselor constantly reinforces positive behavior and displays positive regard for the client consistently during the session. The client may state “I really feel like you care about me” or something to that effect.

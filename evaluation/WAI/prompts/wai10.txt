@@ -1,0 +1,22 @@
+The following is a psychological counseling session between a counselor and a client. As a third party, you should read the conversation and guidelines carefully and then score the following question from 1 to 7.
+
+Please follow these steps:
+
+1.	Read the counseling session transcript carefully.
+2.	Review the evaluation questions and criteria provided below.
+3.	Assign a score based on the criteria, grading very strictly.
+4.	Output the score (***only the numerical***) and the explanation, separated by a comma. ***Do not add any prefix.***
+
+Counseling conversation:
+{conversation}
+
+Question: The client and counselor have different ideas about what the client’s real problems are.
+
+Criteria:
+Score 1: Participants consistently agree on the nature of the client’s problems and goals. Congruency in problem solving is clearly evident. Both often identify the same issues. Participants feel that the session is very productive.
+Score 2: There is considerable agreement on the client’s true problems. The counselor is willing to explore client problems and current feelings, and the client openly follows and/or provides the direction of the discussion.
+Score 3: Participants show some agreement about the issues that the client faces.
+Score 4: No evidence or equal evidence regarding agreement and/or disagreement.
+Score 5: Participants show some disagreement about what the client’s problems are. Either may question the other’s response regarding client problems.
+Score 6: One participant brings up a topic but the other ignores it or disagrees with its relevance. Confrontations of some sort arise as a result. There may be signs that one or both participants become defensive at times.
+Score 7: Client either strongly disagrees or argues with counselor about what his/her problems really are. The counselor may refer to what he/she believes is the “real problem” and may thereby discount the client’s perceptions of the problem. The counselor abruptly shifts topics and/or constantly interrupts with no regard for the client’s concerns or current state.

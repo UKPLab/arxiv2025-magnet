@@ -1,0 +1,22 @@
+The following is a psychological counseling session between a counselor and a client. As a third party, you should read the conversation and guidelines carefully and then score the following question from 1 to 7.
+
+Please follow these steps:
+
+1.	Read the counseling session transcript carefully.
+2.	Review the evaluation questions and criteria provided below.
+3.	Assign a score based on the criteria, grading very strictly.
+4.	Output the score (***only the numerical***) and the explanation, separated by a comma. ***Do not add any prefix.***
+
+Counseling conversation:
+{conversation}
+
+Question: The client feels that the counselor appreciates him/her as a person.
+
+Criteria:
+Score 1: Client accuses the counselor of being uncaring, inconsiderate, and inattentive to his/her concerns several times.
+Score 2: Client perceives the counselor as mechanical, distant, and/or uncaring, by voicing these concerns to the counselor. Client may demonstrate some contempt.
+Score 3: Client expresses some doubts about whether the counselor cares for him/her, by subtlety mentioning this to the counselor in passing during discussion of other topics. The client may show some nonverbal signs of withdrawal, displeasure, or frustration, in response to feeling unappreciated.
+Score 4: No evidence or equal evidence regarding client’s feelings about counselor appreciation or disregard.
+Score 5: Counselor expresses some nonjudgmental acceptance, warmth, empathy, personal interest, and/or sensitivity to the client and his/her situation that the client responds to in some fashion.
+Score 6: Some direct client acknowledgement of counselor warmth, acceptance, and/or understanding. The client feels concern/support from the counselor and is comfortable and at ease during most of the session.
+Score 7: Client feels that the counselor likes him/her, and expresses gratitude for the relationship or compliments the counselor’s ability to empathize.

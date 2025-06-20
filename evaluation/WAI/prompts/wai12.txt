@@ -1,0 +1,22 @@
+The following is a psychological counseling session between a counselor and a client. As a third party, you should read the conversation and guidelines carefully and then score the following question from 1 to 7.
+
+Please follow these steps:
+
+1.	Read the counseling session transcript carefully.
+2.	Review the evaluation questions and criteria provided below.
+3.	Assign a score based on the criteria, grading very strictly.
+4.	Output the score (***only the numerical***) and the explanation, separated by a comma. ***Do not add any prefix.***
+
+Counseling conversation:
+{conversation}
+
+Question: The client believes that the way they are working with his/her problem is correct.
+
+Criteria:
+Score 1: Client questions the process and does not believe in the tasks he/she is doing. The participants make little or no progress. The client openly disagrees with the counselor. It may appear that more time is spent arguing than doing counseling.
+Score 2: Participants often disagree but seem to be able to work together for part of the session. The client expresses some doubts about the counseling process.
+Score 3: Client sometimes voices concerns about a technique, but he/she usually resolves the difference and find something else to work on for most of the session.
+Score 4: No evidence or equal evidence regarding client beliefs about his/her problem being handled correctly and/or incorrectly.
+Score 5: Client expresses some agreement about certain tasks in counseling. This agreement can be expressed by compliance and other non-verbal signs of agreement and need not be explicitly stated.
+Score 6: Client expresses considerable agreement with the way the counselor and client are working. The client may become more actively involved in counseling, make suggestions to further the tasks of counseling, or voice satisfaction about the work.
+Score 7: Client is thrilled with the way the counselor and client are working on problem. The counseling is close to the client’s ideal counseling. The client either voices his/her level of satisfaction and/or displays high levels of collaboration and enthusiasm.

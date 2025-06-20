@@ -1,0 +1,22 @@
+The following is a psychological counseling session between a counselor and a client. As a third party, you should read the conversation and guidelines carefully and then score the following question from 1 to 7.
+
+Please follow these steps:
+
+1.	Read the counseling session transcript carefully.
+2.	Review the evaluation questions and criteria provided below.
+3.	Assign a score based on the criteria, grading very strictly.
+4.	Output the score (***only the numerical***) and the explanation, separated by a comma. ***Do not add any prefix.***
+
+Counseling conversation:
+{conversation}
+
+Question: There are doubts or a lack of understanding about what participants are trying to accomplish in counseling.
+
+Criteria:
+Score 1: Participants are clearly working successfully towards the same identifiable goals. Relevance of long-term goals are apparent to both participants. They may discuss goals in order to praise the counseling process or comment on its usefulness. 
+Score 2: Participants discuss long-term goals, agree, and work on them. Little discussion is needed on this topic, but concerns are immediately addressed and counseling session is adjusted to meet the needs of the client.
+Score 3: Participants may not make mention of long-term goals, but seem to be working toward the same objective. The client seems happy with progress that is made.
+Score 4: No evidence or equal evidence regarding confusion and/or understanding.
+Score 5: Participants may have minor disagreements on long-term goals. Specific tasks may be questioned or resisted. The client may voice a general dissatisfaction.
+Score 6: Participants may need to pause several times to adjust long-term goals. Counseling is interrupted, and several interventions may be questioned. The counselor may assume an “expert” role, and thus may discount the client’s ideas for counseling. The client may become despondent and withdraw emotionally from counseling.
+Score 7: Participants identify different goals, question each other’s priorities for counseling, and are unable to compromise on a solution. The client may state his/her reason for attending counseling that evokes a negative response from the counselor. The client may also express strong displeasure for in-session goals as they might relate to long-term goals.

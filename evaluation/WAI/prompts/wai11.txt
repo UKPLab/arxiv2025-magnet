@@ -1,0 +1,22 @@
+The following is a psychological counseling session between a counselor and a client. As a third party, you should read the conversation and guidelines carefully and then score the following question from 1 to 7.
+
+Please follow these steps:
+
+1.	Read the counseling session transcript carefully.
+2.	Review the evaluation questions and criteria provided below.
+3.	Assign a score based on the criteria, grading very strictly.
+4.	Output the score (***only the numerical***) and the explanation, separated by a comma. ***Do not add any prefix.***
+
+Counseling conversation:
+{conversation}
+
+Question: The client and counselor have established a good understanding of the changes that would be good for the client.
+
+Criteria:
+Score 1: Participants misunderstand each other. They have open disagreements about the process of change. The client voices concerns that he/she seems to be moving towards changes that he/she does not want or that the methods being used will not lead the client towards desired changes.
+Score 2: Client expresses doubts that he/she can change or about methods the counselor is suggesting to bring about change. The client voices some concerns about the change process.
+Score 3: Client may be going through what seems to be productive exercises, but it is not clear to the client and/or counselor how change will occur. It may seem that the client does not see how the process will help him/her.
+Score 4: No evidence or equal evidence regarding understanding and/or misunderstanding.
+Score 5: There is some evidence that the participants understand changes that would be good for the client. Understanding may be gathered from compliance and other non-verbal signs of understanding and need not be explicitly stated.
+Score 6: Participants discuss where the client stands and where he/she is going, through discussion of the client’s current situation, desired goals, and methods for achieving them.
+Score 7: Both the process and ultimate changes hoped for have been made explicit. Throughout the session the participants have open discussions of the client’s goals and methods for achieving these goals. At the end of the session they may summarize progress made towards the goals. Everything they do seems to fit within their treatment plan.

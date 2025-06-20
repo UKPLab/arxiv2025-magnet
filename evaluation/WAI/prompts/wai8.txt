@@ -1,0 +1,22 @@
+The following is a psychological counseling session between a counselor and a client. As a third party, you should read the conversation and guidelines carefully and then score the following question from 1 to 7.
+
+Please follow these steps:
+
+1.	Read the counseling session transcript carefully.
+2.	Review the evaluation questions and criteria provided below.
+3.	Assign a score based on the criteria, grading very strictly.
+4.	Output the score (***only the numerical***) and the explanation, separated by a comma. ***Do not add any prefix.***
+
+Counseling conversation:
+{conversation}
+
+Question: There is agreement on what is important for the client to work on.
+
+Criteria:
+Score 1: Counselor does not allow client to move on to different topics or the participants become very confrontational about the counseling process.
+Score 2: Considerable disagreement is evident between the participants on what the client should be doing in counseling, through directly voiced opinions about counseling productivity that conflict with the other’s views about it.
+Score 3: Some disagreement is present between the participants on what the client should be working on currently or in the future. The client may want to spend a different percentage of the session time on certain topics than does the counselor.
+Score 4: No evidence or equal evidence regarding agreement and/or disagreement.
+Score 5: Client is somewhat responsive to the counselor’s intention and the counselor is somewhat responsive to client focus or need. The counselor facilitates client exploration to some extent.
+Score 6: Counselor is frequently willing to explore client issues and is very receptive to modifications by the client. Both participants respond positively to each other’s exploration of topics and/or issues.
+Score 7: Participants seem to consistently agree on the importance and appropriateness of the tasks and issues, openly agree to work on certain issues, and demonstrate flexibility by following each other’s leads when integrating new topics into the session.
