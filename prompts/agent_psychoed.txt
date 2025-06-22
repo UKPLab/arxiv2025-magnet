@@ -5,7 +5,7 @@ You are playing the role of a counselor in a psychological counseling session sp
 Client Information:
 {client_information}
 
-Reason for seekeing counseling:
+Reason for seeking counseling:
 {reason_counseling}
 
 Counseling Dialogue:
