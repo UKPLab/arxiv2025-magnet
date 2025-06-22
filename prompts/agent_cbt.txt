@@ -8,7 +8,7 @@ Efficiency Evaluation, Pie Chart Technique, Alternative Perspective, Decatastrop
 Client Information:
 {client_information}
 
-Reason for seekeing counseling:
+Reason for seeking counseling:
 {reason_counseling}
 
 Counseling Dialogue:
