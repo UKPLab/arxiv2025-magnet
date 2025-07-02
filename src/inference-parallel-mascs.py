@@ -7,7 +7,7 @@ from abc import ABC, abstractmethod
 from pathlib import Path
 import torch
 from langchain.prompts import PromptTemplate
-from vllm import LLM, SamplingParams
+from vllm import LLM
 from vllm.distributed.parallel_state import destroy_model_parallel
 from openai import AzureOpenAI
 import tiktoken
