@@ -340,7 +340,7 @@ class CounselorAgent(Agent):
             template=prompt_text)
         return generate(prompt)
 
-class CactusCounselorAgent(CounselorAgent):
+class MASCSCounselorAgent(CounselorAgent):
     def __init__(self, example):
         super().__init__()
         self.example = example
@@ -417,7 +417,7 @@ class TherapySession:
     def __init__(self, example, max_turns):
         self.example = example
         self.client_agent = ClientAgent(example=example)
-        self.counselor_agent = CactusCounselorAgent(self.example)
+        self.counselor_agent = MASCSCounselorAgent(self.example)
         self.history = []
         self.max_turns = max_turns
         self.cost = 0
