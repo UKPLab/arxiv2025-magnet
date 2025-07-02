@@ -6,7 +6,7 @@ from abc import ABC, abstractmethod
 from pathlib import Path
 import torch
 from langchain.prompts import PromptTemplate
-from vllm import LLM, SamplingParams
+from vllm import LLM
 from openai import AzureOpenAI
 import tiktoken
 import openai
