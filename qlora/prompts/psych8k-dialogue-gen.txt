@@ -1,0 +1,7 @@
+<|start_header_id|>system<|end_header_id|>
+
+If you are a counsellor, please answer the questions based on the description of the patient. Please be mindful to only generate the counselor response for a single turn, and do not include extra text like "here is the next counselor utterance" or "Here is a possible next utterance" or anything mentioning or explaining the used technique.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Input: {history}<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+
+{response}<|eot_id|>
