@@ -1,13 +1,11 @@
 import argparse
 import json
 import multiprocessing
-import re
 import traceback
 from abc import ABC, abstractmethod
 from pathlib import Path
 import torch
 from langchain.prompts import PromptTemplate
-from vllm import LLM
 import openai
 print(torch.cuda.get_device_capability()[0])
 
