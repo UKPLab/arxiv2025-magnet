@@ -60,7 +60,7 @@ if __name__ == "__main__":
     parser.add_argument("-o","--output_dir", type=str, default=".",
                         help="Directory to to save the results.")
     parser.add_argument("-m_iter","--max_iter", type=int, default=3,
-                        help="Maximum number of turns for the session.")
+                        help="Number of times GPT-4o is run for scoring a single session.")
 
     args = parser.parse_args()
 
