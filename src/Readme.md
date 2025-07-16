@@ -13,7 +13,6 @@ python3 -m vllm.entrypoints.openai.api_server \
 Here replace "$MODEL_PATH" with the local model path and port by the hosting port. In this codebase we use 8000 in all scripts. If a different port is used please replace it each script in this portion:
 
 ```
-# Use your local vLLM server
 client = openai.OpenAI(
     base_url="http://localhost:8000/v1",
     api_key="dummy-key"  # Any value works
