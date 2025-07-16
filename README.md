@@ -60,6 +60,14 @@ Please use the following citation:
 }
 ```
 
+## References/Libraries
+
+- [DeepSpeed][https://www.deepspeed.ai/]
+- [vLLM][https://docs.vllm.ai/en/latest/]
+- [HuggingFace][https://huggingface.co/]
+- [LangChain][https://www.langchain.com/]
+- [cactus][https://github.com/coding-groot/cactus]
+
 ## Disclaimer
 
 > This repository contains experimental software and is published for the sole purpose of giving additional background details on the respective publication. 
