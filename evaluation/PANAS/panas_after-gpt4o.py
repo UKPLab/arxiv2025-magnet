@@ -71,13 +71,13 @@ def save_as_json(dictionary, filename):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Evaluate WAI results")
+        description="Evaluate PANAS results")
     parser.add_argument("-i","--input_dir", type=str, default=".",
                         help="Directory to read the sessions")
     parser.add_argument("-o","--output_dir", type=str, default=".",
                         help="Directory to to save the results.")
     parser.add_argument("-m_iter","--max_iter", type=int, default=3,
-                        help="Maximum number of turns for the session.")
+                        help="Number of times GPT-4o is run for scoring a single client.")
 
     args = parser.parse_args()
     
