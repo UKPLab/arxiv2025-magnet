@@ -14,10 +14,20 @@ For any questions contact: [Aishik Mandal](mailto:aishik.mandal@tu-darmstadt.de)
 
 ## Creating the environment
 
+To create the environment for Inference and Evaluation (i.e. run scripts in folder src/ and evaluation/) use:
+
 ```
 python3 -m venv env
 source env/bin/activate
-pip install -r requirements.txt
+pip install -r requirements_inf_eval.txt
+```
+
+To create the environment for Qlora Fine-tuning (i.e. run scripts in folder qlora/) use:
+
+```
+python3 -m venv env
+source env/bin/activate
+pip install -r requirements_qlora.txt
 ```
 
 ## Code Structure
