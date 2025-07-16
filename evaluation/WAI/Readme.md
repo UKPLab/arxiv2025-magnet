@@ -1,4 +1,4 @@
-## CTRS Folders/Files
+## WAI Folders/Files
 
 - prompts: Contains the prompts used in evaluating the 12 different Items in WAI.
 - cost.ipynb: Calculates the GPT-4o costs involved in the evaluation.
