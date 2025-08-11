@@ -117,8 +117,7 @@ class Psych8kCounselorAgent(CounselorAgent):
         response = response.replace('Output:', '')
         response = response.replace('Counselor:', '')
         response = response.strip()
-        print(prompt)
-        print(response)
+        
         return response
 
 class TherapySession:
@@ -203,7 +202,7 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    with open("../dataset/evaluation.json", "r", encoding="utf-8") as f:
+    with open("../dataset/data.json", "r", encoding="utf-8") as f:
         data = json.load(f)
     data = data[300:]
     output_dir = Path(args.output_dir)

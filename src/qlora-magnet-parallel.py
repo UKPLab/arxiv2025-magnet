@@ -6,13 +6,7 @@ from abc import ABC, abstractmethod
 from pathlib import Path
 import torch
 from langchain.prompts import PromptTemplate
-import torch._dynamo
-torch._dynamo.config.suppress_errors = True
 import openai
-
-if torch.cuda.device_count() > 1:
-  print("Let's use", torch.cuda.device_count(), "GPUs!")
-
 print(torch.cuda.get_device_capability()[0])
 
 # Use your local vLLM server
@@ -21,7 +15,12 @@ client = openai.OpenAI(
     api_key="dummy-key"  # Any value works
 )
 
-def generate(prompt: str) -> str:
+counselor = openai.OpenAI(
+    base_url="http://localhost:8005/v1",
+    api_key="dummy-key"  # Any value works
+)
+
+def generate_client(prompt: str) -> str:
     response = client.completions.create(
     model="model_name",
     prompt=prompt,
@@ -30,6 +29,14 @@ def generate(prompt: str) -> str:
     )
     return response.choices[0].text
 
+def generate_counselor(prompt: str) -> str:
+    response = counselor.completions.create(
+    model="finetuned_model_name",
+    prompt=prompt,
+    temperature=0.7,
+    max_tokens=512
+    )
+    return response.choices[0].text
 
 class Agent(ABC):
     def __init__(self):
@@ -44,7 +51,6 @@ class Agent(ABC):
         file_path = base_dir + file_name
         with open(file_path, "r", encoding="utf-8") as file:
             return file.read()
-
 
 class ClientAgent(Agent):
     def __init__(self, example):
@@ -71,76 +77,17 @@ class ClientAgent(Agent):
             history=history_text
         )
 
-        return generate(prompt)
-
-
-class CBTAgent(Agent):
-    def __init__(self, example):
-        super().__init__()
-        self.example = example
-        self.pattern = r"CBT technique:\s*(.*?)\s*Counseling plan:\s*(.*)"
-        prompt_text = self.load_prompt(f"agent_cbt.txt")
-        self.prompt_template = PromptTemplate(
-            input_variables=[
-                "client_information",
-                "reason_counseling",
-                'history',
-            ],
-            template=prompt_text)
-
-    def generate(self, history):
-        prompt = self.prompt_template.format(
-            client_information=self.example['AI_counselor']['CBT'][
-                'client_information'],
-            reason_counseling=self.example['AI_counselor']['CBT'][
-                'reason_counseling'],
-            history = "Client: " + history
-        )
-        response = generate(prompt)
-
-        print(response)
-        try:
-            cbt_technique = response.split("Counseling")[0].replace("\n", "")
-        except Exception as e:
-            cbt_technique = None
-            print(e)
-
-        try:
-            cbt_plan_list = response.split("Counseling")[1].split(":\n")[1:]
-            cbt_plan = " ".join(cbt_plan_list)
-        except Exception as e:
-            cbt_plan = None
-            print(e)
-
-        if cbt_plan:
-            return cbt_technique, cbt_plan
-        else:
-            error_file_path = Path(
-                f"./invalid_response_{self.example[:10]}.txt")
-            with open(error_file_path, "w", encoding="utf-8") as f:
-                f.write(response)
-            raise ValueError("Invalid response format from LLM")
-
-    def extract_cbt_details(self, response):
-        match = re.search(self.pattern, response, re.DOTALL | re.IGNORECASE)
-
-        if not match:
-            return None, None
-
-        cbt_technique = match.group(1).strip()
-        cbt_plan = match.group(2).strip()
-        return cbt_technique, cbt_plan
-
-
+        return generate_client(prompt)
+        
 class CounselorAgent(Agent):
     def __init__(self):
         super().__init__()
-        prompt_text = self.load_prompt(f"agent_cactus.txt")
+        prompt_text = self.load_prompt(f"qlora-magnet-dialogue-gen.txt")
         self.prompt_template = PromptTemplate(
             input_variables=["history"],
             template=prompt_text)
 
-    def generate(self, history):
+    def generate(self, history, cbt_plan):
         history = '\n'.join(
             [
                 f"{message['role'].capitalize()}: {message['message']}"
@@ -148,28 +95,16 @@ class CounselorAgent(Agent):
             ]
         )
         prompt = self.prompt_template.format(history=history)
-        return generate(prompt)
+        return generate_counselor(prompt)
 
-
-class CactusCounselorAgent(CounselorAgent):
+class MAGNETCounselorAgent(CounselorAgent):
     def __init__(self, example):
         super().__init__()
         self.example = example
-        self.cbt_technique = None
-        self.cbt_plan = None
-        prompt_text = self.load_prompt(f"agent_cactus.txt")
+        prompt_text = self.load_prompt(f"qlora-magnet-dialogue-gen.txt")
         self.prompt_template = PromptTemplate(
-            input_variables=[
-                "client_information",
-                "reason_counseling",
-                "cbt_plan",
-                "history"
-            ],
+            input_variables=["client_information","reason_counseling","history"],
             template=prompt_text)
-
-    def set_cbt(self, history):
-        cbt_agent = CBTAgent(self.example)
-        self.cbt_technique, self.cbt_plan = cbt_agent.generate(history)
 
     def generate(self, history):
         history_text = '\n'.join(
@@ -178,16 +113,16 @@ class CactusCounselorAgent(CounselorAgent):
                 for message in history
             ]
         )
+        
         prompt = self.prompt_template.format(
             client_information=self.example['AI_counselor']['CBT'][
                 'client_information'],
             reason_counseling=self.example['AI_counselor']['CBT'][
                 'reason_counseling'],
-            cbt_plan=self.cbt_plan,
-            history=history_text,
+            history = history_text
         )
 
-        response = generate(prompt)
+        response = generate_counselor(prompt)
 
         if "'message':" in response:
             response = self.clean_message(response)
@@ -214,7 +149,7 @@ class TherapySession:
     def __init__(self, example, max_turns):
         self.example = example
         self.client_agent = ClientAgent(example=example)
-        self.counselor_agent = CactusCounselorAgent(self.example)
+        self.counselor_agent = MAGNETCounselorAgent(self.example)
         self.history = []
         self.max_turns = max_turns
 
@@ -225,7 +160,6 @@ class TherapySession:
         example_cbt = self.example['AI_counselor']['CBT']
         self._add_to_history("counselor",example_cbt['init_history_counselor'])
         self._add_to_history("client", example_cbt['init_history_client'])
-        self.counselor_agent.set_cbt(example_cbt['init_history_client'])
 
     def _exchange_statements(self):
 
@@ -234,7 +168,6 @@ class TherapySession:
             counselor_statement = counselor_statement.replace('Counselor: ',
                                                               '')
             self._add_to_history("counselor", counselor_statement)
-
             client_statement = self.client_agent.generate(self.history)
             client_statement = client_statement.replace('Client: ', '')
 
@@ -250,19 +183,13 @@ class TherapySession:
         self._exchange_statements()
         return {
             "example": self.example,
-            "cbt_technique": getattr(
-                self.counselor_agent,
-                'cbt_technique',
-                None
-            ),
-            "cbt_plan": getattr(self.counselor_agent, 'cbt_plan', None),
             "history": self.history
         }
 
 
 def run_therapy_session(index, example, output_dir, total, max_turns):
     output_dir = Path(output_dir)
-    file_number = index + 1
+    file_number = index + 301
 
     try:
         print(f"Generating example {file_number} out of {total}")
@@ -285,6 +212,7 @@ def run_therapy_session(index, example, output_dir, total, max_turns):
         with open(error_file_path, "w", encoding="utf-8") as f:
             f.write("".join(traceback.format_exception(type(e), e, tb)))
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description="Run therapy sessions in parallel.")
@@ -301,10 +229,10 @@ if __name__ == "__main__":
 
     with open("../dataset/data.json", "r", encoding="utf-8") as f:
         data = json.load(f)
-      
+    data = data[300:]
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
-    
+
     total = len(data)
     args_list = [(index, example, output_dir, total, args.max_turns)
                  for index, example in enumerate(data)]

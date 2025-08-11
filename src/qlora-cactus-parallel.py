@@ -124,9 +124,6 @@ class CactusCounselorAgent(CounselorAgent):
 
         response = generate_counselor(prompt)
 
-        print(prompt)
-        print(response)
-
         if "'message':" in response:
             response = self.clean_message(response)
 
@@ -230,9 +227,9 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    with open("../dataset/evaluation.json", "r", encoding="utf-8") as f:
+    with open("../dataset/data.json", "r", encoding="utf-8") as f:
         data = json.load(f)
-    data = data[300:305]
+    data = data[300:]
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
