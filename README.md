@@ -60,16 +60,14 @@ Folders in the code base:
 Please use the following citation:
 
 ```
-@InProceedings{smith:20xx:CONFERENCE_TITLE,
-  author    = {Smith, John},
-  title     = {My Paper Title},
-  booktitle = {Proceedings of the 20XX Conference on XXXX},
-  month     = mmm,
-  year      = {20xx},
-  address   = {Gotham City, USA},
-  publisher = {Association for XXX},
-  pages     = {XXXX--XXXX},
-  url       = {http://xxxx.xxx}
+@misc{mandal2025magnetcoordinatedmultiagentgeneration,
+      title={MAGneT: Coordinated Multi-Agent Generation of Synthetic Multi-Turn Mental Health Counseling Sessions}, 
+      author={Aishik Mandal and Tanmoy Chakraborty and Iryna Gurevych},
+      year={2025},
+      eprint={2509.04183},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2509.04183}, 
 }
 ```
 
