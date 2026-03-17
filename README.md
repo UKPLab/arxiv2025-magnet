@@ -9,7 +9,7 @@ For any questions contact: [Aishik Mandal](mailto:aishik.mandal@tu-darmstadt.de)
 
 ## Summary
 
-This codebase provides the scripts used in the experiments of the 2025 Arxiv paper "[MAGneT: Coordinated Multi-Agent Generation of Synthetic Multi-Turn Mental Health Counseling Sessions]()". Here, we generate synthetic counseling session data using MAGneT, a novel Multi-Agent framework. MAGneT includes:
+This codebase provides the scripts used in the experiments of the 2025 Arxiv paper "[MAGneT: Coordinated Multi-Agent Generation of Synthetic Multi-Turn Mental Health Counseling Sessions](https://arxiv.org/pdf/2509.04183)". Here, we generate synthetic counseling session data using MAGneT, a novel Multi-Agent framework. MAGneT includes:
 - A CBT Agent: It provides the CBT plan to be followed by the counselor during the session.
 - 5 Specialized Response Generation Agents: It includes 5 agents each speclializing in a specific psychological technique, specifically: Reflection, Questioning, Solution provision, Normalizing, and Psycho-education.
 - A Technique Agent: The technique agent dynamically selects the psychological techniques to be used by the counselor in the current dialogue turn based on the dialogue hiatory and CBT plan.
