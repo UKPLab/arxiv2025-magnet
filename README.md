@@ -8,7 +8,7 @@ For any questions contact: [Aishik Mandal](mailto:aishik.mandal@tu-darmstadt.de)
 [UKP Lab](https://www.informatik.tu-darmstadt.de/ukp/ukp_home/index.en.jsp) | [TU Darmstadt](https://www.tu-darmstadt.de/) 
 
 ## Dataset and Model
-Our dataset and model can be dowloaded at [MAGneT Dataset](https://huggingface.co/datasets/UKPLab/MAGneT) and [Llama3-MAGneT](https://huggingface.co/UKPLab/Llama3-MAGneT)
+Our dataset and model can be dowloaded [here](https://huggingface.co/collections/UKPLab/graph2counsel)
 
 ## Summary
 
