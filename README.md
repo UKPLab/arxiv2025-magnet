@@ -7,6 +7,9 @@
 For any questions contact: [Aishik Mandal](mailto:aishik.mandal@tu-darmstadt.de) <br>
 [UKP Lab](https://www.informatik.tu-darmstadt.de/ukp/ukp_home/index.en.jsp) | [TU Darmstadt](https://www.tu-darmstadt.de/) 
 
+## Dataset and Model
+Our dataset and model can be dowloaded at [MAGneT Dataset](https://huggingface.co/datasets/UKPLab/MAGneT) and [Llama3-MAGneT](https://huggingface.co/UKPLab/Llama3-MAGneT)
+
 ## Summary
 
 This codebase provides the scripts used in the experiments of the 2025 Arxiv paper "[MAGneT: Coordinated Multi-Agent Generation of Synthetic Multi-Turn Mental Health Counseling Sessions](https://arxiv.org/pdf/2509.04183)". Here, we generate synthetic counseling session data using MAGneT, a novel Multi-Agent framework. MAGneT includes:
